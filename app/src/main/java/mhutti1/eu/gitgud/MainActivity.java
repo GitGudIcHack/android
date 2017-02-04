@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity
     implements NavigationView.OnNavigationItemSelectedListener {
@@ -40,6 +41,16 @@ public class MainActivity extends AppCompatActivity
 
     NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
     navigationView.setNavigationItemSelectedListener(this);
+
+    ListView questions = (ListView) findViewById(R.id.question_list);
+    CardArrayAdapter questionArrayAdapter = new CardArrayAdapter(this, R.id.card_view);
+    questions.setAdapter(questionArrayAdapter);
+    questionArrayAdapter.add(new Question("test", "test", "test", 1));
+    questionArrayAdapter.add(new Question("test2", "test2", "test2", 1));
+
+    questionArrayAdapter.notifyDataSetChanged();
+
+
   }
 
   @Override
