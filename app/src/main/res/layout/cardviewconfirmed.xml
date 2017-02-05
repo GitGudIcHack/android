@@ -27,29 +27,24 @@
         android:layout_width="fill_parent"
         android:layout_alignParentBottom="true">
 
-        <EditText
+        <Button
           android:id="@+id/firstOption"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:background="?android:attr/selectableItemBackground"
-          android:paddingBottom="10dp"
-          android:paddingTop="10dp"
           android:layout_weight="1"
           android:singleLine="true"
-          android:nextFocusDown="@+id/sectionOption"
-        android:textAlignment="center">
-        </EditText>
-        <EditText
+          android:textAlignment="center">
+        </Button>
+        <Button
           android:id="@+id/sectionOption"
           android:layout_width="match_parent"
           android:background="?android:attr/selectableItemBackground"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:paddingBottom="10dp"
-          android:paddingTop="10dp"
           android:singleLine="true"
           android:textAlignment="center">
-        </EditText>
+        </Button>
       </LinearLayout>
       <TextView
         android:text="Who should I vote for?"
